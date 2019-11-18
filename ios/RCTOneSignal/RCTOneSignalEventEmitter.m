@@ -442,4 +442,10 @@ RCT_EXPORT_METHOD(sendOutcomeWithValue:(NSString *)name withValue:(float)value w
     //  }];
 }
 
+RCT_EXPORT_METHOD(setBadgeCount:(int)count) {
+    UIApplication *app = RCTSharedApplication();
+
+    app.applicationIconBadgeNumber = count;
+}
+
 @end
