@@ -27,6 +27,7 @@ dependencies {
     api 'com.onesignal:OneSignal:3.12.2'
 
     testImplementation 'junit:junit:4.12'
+    compile 'me.leolin:ShortcutBadger:1.1.4@aar'
 }
 
 // Adds required manifestPlaceholders keys to allow mainifest merge gradle step to complete

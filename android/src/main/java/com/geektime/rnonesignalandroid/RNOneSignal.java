@@ -519,6 +519,18 @@ public class RNOneSignal extends ReactContextBaseJavaModule implements Lifecycle
       });
    }
 
+   @ReactMethod
+   public void setBadgeCount(int count) {
+      try {
+         Log.d("OneSignal", "setBadgeCount to: " + count);
+         Context currentContext = mReactContext.getApplicationContext();
+         ShortcutBadger.applyCount(currentContext, count);
+
+      } catch (Exception e) {
+         Log.e("OneSignal", "setBadgeCount Error: " + e.getMessage());
+      }
+   }
+
    /**
     * Overrides
     */

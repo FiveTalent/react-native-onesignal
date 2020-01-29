@@ -361,10 +361,6 @@ export default class OneSignal {
     static setBadgeCount(count) {
         if(!checkIfInitialized()) return;
 
-        if(Platform.OS !== 'ios') {
-            return;
-        }
-
         RNOneSignal.setBadgeCount(count);
     }
 
